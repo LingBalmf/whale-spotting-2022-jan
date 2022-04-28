@@ -20,6 +20,7 @@ export function CreateSightingPage(): JSX.Element {
   const [speciesList, setSpeciesList] = useState<Species[]>([]);
   const [speciesId, setSpeciesId] = useState<number>();
   const [description, setDescription] = useState("");
+  const [speciesPhotoUrl, setSpeciesPhotoUrl] = useState("");
   const [photoUrl, setPhotoUrl] = useState("");
   const [status, setStatus] = useState<FromStatus>("READY");
   const { username, password } = useContext(LoginContext);
@@ -52,7 +53,14 @@ export function CreateSightingPage(): JSX.Element {
   }, []);
 
   const handleSpeciesChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    setSpeciesId(Number(event.target.value));
+    const speciesId = Number(event.target.value);
+    setSpeciesId(speciesId);
+    const speciesItem = speciesList.find(
+      (speciesItem) => speciesItem.id === speciesId
+    );
+    if (speciesItem) {
+      setSpeciesPhotoUrl(speciesItem.photoUrl);
+    }
   };
   const handleLocationChange = (
     event: React.ChangeEvent<HTMLSelectElement>
@@ -99,6 +107,7 @@ export function CreateSightingPage(): JSX.Element {
               </option>
             ))}
           </select>
+          <img src={speciesPhotoUrl} alt=""></img>
           <label htmlFor="description">Description</label>
           <textarea
             maxLength={2048}
