@@ -1,19 +1,19 @@
 @import "../../styles/constants.scss";
 
-.reportSighting {
+.updateUserRole {
   background-color: $color-background;
   font-family: $font-family;
   color: $color-font;
 }
 
-.reportSighting__header {
-  background-color: $color-block-blackground;
+.updateUserRole__header {
+  background-color: $color-background;
   font-family: $font-family;
   color: $color-font;
   text-align: center;
 }
 
-.reportSighting__form {
+.updateUserRole__form {
   display: grid;
   grid-template-columns: [labels] auto [controls] auto;
   grid-auto-flow: row;
@@ -24,32 +24,34 @@
 
   label {
     grid-column: labels;
-    width: 100px;
+    width: 95%;
   }
 
   input,
   select,
-  textarea {
+  textarea,
+  img {
     grid-column: controls;
     border: none;
     padding: 0.2em;
     grid-row: auto;
+    width: 100%;
   }
 
-  .reportSighting__button {
+  .updateUserRole__button {
     margin-bottom: 2em;
-    width: 50%;
+    width: 100%;
   }
 }
 
-.reportSighting__error {
+.updateUserRole__error {
   color: pink;
   font-size: larger;
   grid-column-start: 1;
   grid-column-end: 3;
   justify-self: center;
 }
-.reportSighting__success {
+.updateUserRole__success {
   color: $color-font;
   font-size: larger;
   grid-column-start: 1;
@@ -61,13 +63,21 @@
 }
 
 @media (min-width: 900px) {
-  .reportSighting__form {
+  .updateUserRole__form {
     width: 50%;
+    .updateUserRole__button {
+      margin-bottom: 2em;
+      width: 50%;
+    }
   }
 }
 
 @media (min-width: 600px) and (max-width: 900px) {
-  .reportSighting__form {
+  .updateUserRole__form {
     width: 70%;
+    .updateUserRole__button {
+      margin-bottom: 2em;
+      width: 60%;
+    }
   }
 }

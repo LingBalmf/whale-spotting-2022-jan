@@ -29,13 +29,20 @@
 
   input,
   select,
-  textarea,
-  img {
+  textarea {
     grid-column: controls;
     border: none;
     padding: 0.2em;
     grid-row: auto;
     width: 100%;
+  }
+
+  img {
+    grid-column: controls;
+    border: none;
+    padding: 0.2em;
+    grid-row: auto;
+    width: 40vw;
   }
 
   .reportSighting__button {

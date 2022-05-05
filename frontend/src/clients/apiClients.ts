@@ -360,7 +360,7 @@ export async function deleteSpecies(
   }
 }
 
-export async function addAdmin(
+export async function updateUserRole(
   update: UpdateUser,
   username: string,
   password: string

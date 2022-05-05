@@ -151,7 +151,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  .div {
+    display: flex;
+    flex: 0 0 33.333333%;
+  }
 }
+
 .sighting__paginate {
   display: flex;
   justify-content: center;

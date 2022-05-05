@@ -107,7 +107,8 @@ export function CreateSightingPage(): JSX.Element {
               </option>
             ))}
           </select>
-          <img src={speciesPhotoUrl} alt=""></img>
+          <label htmlFor="species-photo"></label>
+          <img id="species-photo" src={speciesPhotoUrl} alt=""></img>
           <label htmlFor="description">Description</label>
           <textarea
             maxLength={2048}

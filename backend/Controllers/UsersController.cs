@@ -46,11 +46,6 @@ namespace WhaleSpotting.Controllers
 
             return Created("/api", newUser);
         }
-        [HttpGet("/users")]
-        public ActionResult<List<User>> UserList()
-        {
-            return _users.GetAllUsers();
-        }
 
         [HttpGet("{username}")]
         public ActionResult<ReducedUserResponse> GetUser([FromRoute] string username)
