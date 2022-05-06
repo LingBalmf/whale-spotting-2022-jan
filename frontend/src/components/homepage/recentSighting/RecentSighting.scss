@@ -1,8 +1,28 @@
 @import "../../../styles/constants.scss";
 
+.recent-sighting {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.recent-sighting__title {
+  background-color: $color-background;
+  background-color: adjust-hue($color: #00000071, $degrees: 0);
+  color: $color-font;
+  font-size: large;
+  width: 100vw;
+  padding: 1rem;
+}
+
 .recent-sighting__img {
-  border-color: $color-background;
-  border-radius: 45%;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  img {
+    vertical-align: middle;
+    width: 70%;
+  }
 }
 
 .recent-sighting__img-front img {
@@ -20,14 +40,6 @@
   height: 80%;
 }
 
-.recent-sighting__title {
-  background-color: $color-background;
-  background-color: adjust-hue($color: #00000071, $degrees: 0);
-  color: $color-font;
-  font-size: large;
-  width: 100vw;
-  padding: 1rem;
-}
 .recent-sighting__text {
   background-color: $color-background;
   color: $color-font;

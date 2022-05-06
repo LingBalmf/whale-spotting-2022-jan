@@ -12,14 +12,14 @@
   background-attachment: fixed;
   background-size: cover;
   height: 300vh;
+  padding: 0;
 }
 
 .homepage__title {
   background-color: $color-background;
   color: white;
   width: 100vw;
-  padding: 1rem;
-  padding-top: 10px;
+  text-align: center;
 }
 
 @media (min-width: 900px) {

@@ -6,11 +6,11 @@ import { HomeLeaderboard } from "./homepageLeaderboard/homepageLeaderboard";
 
 export const Home: React.FunctionComponent = () => {
   return (
-    <div className="homepage">
+    <main className="homepage">
       <h1 className="homepage__title">Whale Spotting 🐳</h1>
       <RecentSighting />
       <PopularLocations />
       <HomeLeaderboard />
-    </div>
+    </main>
   );
 };

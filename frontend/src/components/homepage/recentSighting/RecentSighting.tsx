@@ -30,12 +30,10 @@ export function RecentSighting() {
 
     return (
       <section className="recent-sighting">
-        <section>
-          <div className="recent-sighting__img-front">
-            <img src={recentSighting.photoUrl}></img>
-          </div>
-        </section>
         <h1 className="recent-sighting__title">Most Recent Whale Sighting</h1>
+        <div className="recent-sighting__img">
+          <img src={recentSighting.photoUrl}></img>
+        </div>
         <section className="recent-sighting__text-container">
           <section className="recent-sighting__text recent-sighting__left">
             <p>
