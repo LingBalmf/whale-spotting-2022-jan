@@ -138,7 +138,7 @@ export function UpdateSpeciesPage(): JSX.Element {
           {status === "FINISHED" ? (
             <div className="updateSpecies__success">
               Form submitted successfully.&ensp;
-              <Link to="/species/meetwhales">Back to Meet The Whales</Link>
+              <Link to="/species">Back to Whale Species</Link>
             </div>
           ) : (
             <></>

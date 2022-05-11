@@ -1,7 +1,7 @@
 import { useEffect, useState, useContext } from "react";
-import "./MeetTheWhalesPage.scss";
+import "./SpeciesListPage.scss";
 import { deleteSpecies, fetchSpecies, Species } from "../../clients/apiClients";
-import { LoginContext } from "../../components/login/LoginManager";
+import { LoginContext } from "../login/LoginManager";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 
@@ -14,7 +14,7 @@ export const notifyOfSuccessfulDelete = () => {
   });
 };
 
-export function MeetTheWhalesPage(): JSX.Element {
+export function SpeciesListPage(): JSX.Element {
   const [species, setSpecies] = useState<Array<Species>>([]);
   const { username, password, isAdmin } = useContext(LoginContext);
 
@@ -32,7 +32,7 @@ export function MeetTheWhalesPage(): JSX.Element {
 
   return (
     <div className="species__list__body">
-      <h1 className="species__list__title">Meet the Whales!</h1>
+      <h1 className="species__list__title">Whale Species</h1>
       <ul className="list-group list-group-flush">
         {species.map((s, i) => (
           <li className="species__list__item" key={i}>

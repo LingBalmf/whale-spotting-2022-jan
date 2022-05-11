@@ -45,7 +45,7 @@ export const DesktopNavbar: React.FunctionComponent = () => {
           <Link to="/plantrip"> Plan a Trip</Link>
         </li>
         <li className="desktop__menuitem">
-          <Link to="/species/meetwhales"> Meet the Whales</Link>
+          <Link to="/species"> Whale Species</Link>
         </li>
         {loginContext.isAdmin ? (
           <li className="desktop__menuitem">
@@ -56,7 +56,7 @@ export const DesktopNavbar: React.FunctionComponent = () => {
                 <Link to="/species/create">Create species </Link>
               </li>
               <li className="desktop__menuitem">
-                <Link to="/species/meetwhales">Update species </Link>
+                <Link to="/species">Update species </Link>
               </li>
               <li className="desktop__menuitem">
                 <Link to="/users/update">Update User Role</Link>

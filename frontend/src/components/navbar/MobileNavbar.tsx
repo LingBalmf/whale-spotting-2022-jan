@@ -71,13 +71,8 @@ export const MobileNavbar: React.FunctionComponent = () => {
         >
           Leaderboard
         </Link>
-        <Link
-          id="meetwhales"
-          className="menu-item"
-          to="/species/meetwhales"
-          onClick={() => closeMenu()}
-        >
-          Meet the Whales
+        <Link className="menu-item" to="/species" onClick={() => closeMenu()}>
+          Whale Species
         </Link>
         {loginContext.isAdmin ? (
           <Link
@@ -94,7 +89,7 @@ export const MobileNavbar: React.FunctionComponent = () => {
           <>
             <Link
               className="menu-item"
-              to="/species/meetwhales"
+              to="/species"
               onClick={() => closeMenu()}
             >
               Update Species

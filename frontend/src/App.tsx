@@ -16,7 +16,7 @@ import { CreateUser } from "./pages/SignUp/SignUp";
 import { Login } from "./components/login/Login";
 import { SightingListPage } from "./pages/Sightings/SightingListPage";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { MeetTheWhalesPage } from "./components/meetTheWhales/MeetTheWhalesPage";
+import { SpeciesListPage } from "./components/SpeciesListPage/SpeciesListPage";
 import { CreateSpeciesPage } from "./components/createSpeciesPage/CreateSpeciesPage";
 import { UpdateSpeciesPage } from "./components/updateSpeciesPage/UpdateSpeciesPage";
 import { Leaderboard } from "./pages/Leaderboard/Leaderboard";
@@ -48,8 +48,8 @@ const Routes: React.FunctionComponent = () => {
       <Route path="/leaderboard">
         <Leaderboard />
       </Route>
-      <Route path="/species/meetwhales">
-        <MeetTheWhalesPage />
+      <Route exact path="/species">
+        <SpeciesListPage />
       </Route>
       <Route path="/species/create">
         {loginContext.isAdmin ? <CreateSpeciesPage /> : <Login />}
