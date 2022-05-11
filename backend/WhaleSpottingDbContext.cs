@@ -12,6 +12,8 @@ namespace WhaleSpotting
         public DbSet<Location> Locations{ get; set; }
         public DbSet<Sighting> Sightings { get; set; }
         public DbSet<EndangeredStatus> EndangeredStatuses { get; set; }
+        
+        public DbSet<Whales> Whales { get; set; }
 
         protected override void OnConfiguring(
             DbContextOptionsBuilder optionsBuilder
