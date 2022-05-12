@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace WhaleSpotting.Controllers
 {
     [ApiController]
-    [Route("/meetwhales")]
+    [Route("/whales")]
 
     public class WhalesController : ControllerBase
     {   

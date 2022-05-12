@@ -98,6 +98,16 @@ export interface LeaderboardEntry {
   count: number;
 }
 
+export interface Whale {
+  id: number;
+  name: string;
+  age: number;
+  description: string;
+  photoUrl: string;
+  species: Species;
+  sponsor: User;
+}
+
 function getAuthorizationHeader(username: string, password: string) {
   return `Basic ${btoa(`${username}:${password}`)}`;
 }
@@ -396,5 +406,10 @@ export async function fetchUserRoleType(): Promise<Array<UserRoleType>> {
       "Content-Type": "application/json",
     },
   });
+  return await response.json();
+}
+
+export async function fetchAllWhales(): Promise<Array<Whale>> {
+  const response = await fetch(`${baseUrl}/whales`);
   return await response.json();
 }
