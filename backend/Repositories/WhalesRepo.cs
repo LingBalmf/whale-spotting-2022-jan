@@ -25,7 +25,7 @@ namespace WhaleSpotting.Repositories
             return _context
                 .Whales
                 .Include(s => s.Species)
-                .Include(u => u.SponsorId)
+                .Include(u => u.Sponsor)
                 .ToList();
         }
     }

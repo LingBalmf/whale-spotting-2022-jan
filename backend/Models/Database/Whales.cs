@@ -8,7 +8,7 @@ namespace WhaleSpotting.Models.Database
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public DateTime RegistedDate { get; set; }
+        public DateTime RegisteredDate { get; set; }
         public int Age { get; set; }
         public string Description { get; set; }
         public string PhotoUrl { get; set; }
@@ -17,7 +17,7 @@ namespace WhaleSpotting.Models.Database
         public Species Species { get; set; }
   
         [ForeignKey("SponsorUserId")]
-        public User SponsorId { get; set; }
+        public User Sponsor { get; set; }
 
     }
 }

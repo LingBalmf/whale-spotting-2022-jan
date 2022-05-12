@@ -184,7 +184,7 @@ namespace WhaleSpotting.Migrations
                     b.Property<string>("PhotoUrl")
                         .HasColumnType("text");
 
-                    b.Property<DateTime>("RegistedDate")
+                    b.Property<DateTime>("RegisteredDate")
                         .HasColumnType("timestamp without time zone");
 
                     b.Property<int?>("SpeciesId")
@@ -252,13 +252,13 @@ namespace WhaleSpotting.Migrations
                         .WithMany()
                         .HasForeignKey("SpeciesId");
 
-                    b.HasOne("WhaleSpotting.Models.Database.User", "SponsorId")
+                    b.HasOne("WhaleSpotting.Models.Database.User", "Sponsor")
                         .WithMany()
                         .HasForeignKey("SponsorUserId");
 
                     b.Navigation("Species");
 
-                    b.Navigation("SponsorId");
+                    b.Navigation("Sponsor");
                 });
 
             modelBuilder.Entity("WhaleSpotting.Models.Database.Location", b =>

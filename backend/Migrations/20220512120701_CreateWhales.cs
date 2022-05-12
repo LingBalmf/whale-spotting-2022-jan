@@ -15,7 +15,7 @@ namespace WhaleSpotting.Migrations
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     Name = table.Column<string>(type: "text", nullable: true),
-                    RegistedDate = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
+                    RegisteredDate = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
                     Age = table.Column<int>(type: "integer", nullable: false),
                     Description = table.Column<string>(type: "text", nullable: true),
                     PhotoUrl = table.Column<string>(type: "text", nullable: true),
