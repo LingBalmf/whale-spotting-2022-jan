@@ -4,7 +4,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace WhaleSpotting.Migrations
 {
-    public partial class CreateWhales : Migration
+    public partial class CreateWhaleModel : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

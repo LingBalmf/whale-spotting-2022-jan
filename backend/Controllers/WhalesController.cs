@@ -19,7 +19,7 @@ namespace WhaleSpotting.Controllers
         }
         
         [HttpGet("")]
-        public ActionResult<List<Whales>> WhalesList()
+        public ActionResult<List<Whale>> WhalesList()
         {
             return _whalesRepo.GetAllWhales();
         }

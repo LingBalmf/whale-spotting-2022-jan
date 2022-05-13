@@ -8,7 +8,7 @@ namespace WhaleSpotting.Repositories
 {
     public interface IWhalesRepo
     {
-        List<Whales> GetAllWhales();
+        List<Whale> GetAllWhales();
     }
 
     public class WhalesRepo : IWhalesRepo
@@ -20,7 +20,7 @@ namespace WhaleSpotting.Repositories
             _context = context;
         }
 
-        public List<Whales> GetAllWhales()
+        public List<Whale> GetAllWhales()
         {
             return _context
                 .Whales

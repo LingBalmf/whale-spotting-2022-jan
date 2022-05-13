@@ -165,7 +165,7 @@ namespace WhaleSpotting.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("WhaleSpotting.Models.Database.Whales", b =>
+            modelBuilder.Entity("WhaleSpotting.Models.Database.Whale", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -246,7 +246,7 @@ namespace WhaleSpotting.Migrations
                     b.Navigation("EndangeredStatus");
                 });
 
-            modelBuilder.Entity("WhaleSpotting.Models.Database.Whales", b =>
+            modelBuilder.Entity("WhaleSpotting.Models.Database.Whale", b =>
                 {
                     b.HasOne("WhaleSpotting.Models.Database.Species", "Species")
                         .WithMany()

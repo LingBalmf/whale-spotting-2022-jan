@@ -11,8 +11,8 @@ using WhaleSpotting;
 namespace WhaleSpotting.Migrations
 {
     [DbContext(typeof(WhaleSpottingDbContext))]
-    [Migration("20220512120701_CreateWhales")]
-    partial class CreateWhales
+    [Migration("20220513092011_CreateWhaleModel")]
+    partial class CreateWhaleModel
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -167,7 +167,7 @@ namespace WhaleSpotting.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("WhaleSpotting.Models.Database.Whales", b =>
+            modelBuilder.Entity("WhaleSpotting.Models.Database.Whale", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -248,7 +248,7 @@ namespace WhaleSpotting.Migrations
                     b.Navigation("EndangeredStatus");
                 });
 
-            modelBuilder.Entity("WhaleSpotting.Models.Database.Whales", b =>
+            modelBuilder.Entity("WhaleSpotting.Models.Database.Whale", b =>
                 {
                     b.HasOne("WhaleSpotting.Models.Database.Species", "Species")
                         .WithMany()

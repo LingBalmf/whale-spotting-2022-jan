@@ -4,7 +4,7 @@ using System;
 
 namespace WhaleSpotting.Models.Database
 {
-    public class Whales
+    public class Whale
     {
         public int Id { get; set; }
         public string Name { get; set; }
