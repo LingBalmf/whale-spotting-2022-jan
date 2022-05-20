@@ -108,6 +108,15 @@ export interface Whale {
   sponsor: User;
 }
 
+export interface NewWhale {
+  name: string;
+  registeredDate: Date;
+  age: number;
+  description: string;
+  photoUrl: string;
+  speciesId: number;
+}
+
 function getAuthorizationHeader(username: string, password: string) {
   return `Basic ${btoa(`${username}:${password}`)}`;
 }
@@ -412,4 +421,22 @@ export async function fetchUserRoleType(): Promise<Array<UserRoleType>> {
 export async function fetchAllWhales(): Promise<Array<Whale>> {
   const response = await fetch(`${baseUrl}/whales`);
   return await response.json();
+}
+
+export async function createWhale(
+  newWhale: NewWhale,
+  username: string,
+  password: string
+) {
+  const response = await fetch(`${baseUrl}/whales/create`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: getAuthorizationHeader(username, password),
+    },
+    body: JSON.stringify(newWhale),
+  });
+  if (!response.ok) {
+    throw new Error(await response.json());
+  }
 }

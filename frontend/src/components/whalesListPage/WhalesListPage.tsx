@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./WhalesListPage.scss";
 import { fetchAllWhales, Whale } from "../../clients/apiClients";
+import { addSponsor } from "./addSponsor";
 
 export function WhalesListPage(): JSX.Element {
   const [whale, setWhale] = useState<Array<Whale>>([]);
@@ -23,12 +24,13 @@ export function WhalesListPage(): JSX.Element {
               <img className="whales--img" src={s.photoUrl} alt=""></img>
             </li>
             <li>{s.species.name}</li>
+            {/* <li>{JSON.stringify(s)}</li> */}
             {s.sponsor ? (
-              <li> Adopted by: {s.sponsor.name}</li>
+              <li> Sponsored by: {s.sponsor.name}</li>
             ) : (
               <button
                 onClick={() => {
-                  alert("Button Clicked!");
+                  addSponsor();
                 }}
                 type="submit"
               >

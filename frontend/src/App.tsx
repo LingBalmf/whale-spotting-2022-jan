@@ -22,6 +22,7 @@ import { UpdateSpeciesPage } from "./components/updateSpeciesPage/UpdateSpeciesP
 import { Leaderboard } from "./pages/Leaderboard/Leaderboard";
 import { UpdateUserRole } from "./components/UpdateUserRolePage/UpdateUserRole";
 import { WhalesListPage } from "./components/whalesListPage/WhalesListPage";
+import { CreateWhalePage } from "./components/createWhalePage/CreateWhalePage";
 
 const Routes: React.FunctionComponent = () => {
   const loginContext = useContext(LoginContext);
@@ -58,8 +59,11 @@ const Routes: React.FunctionComponent = () => {
       <Route path="/species/:id/update">
         {loginContext.isAdmin ? <UpdateSpeciesPage /> : <Login />}
       </Route>
-      <Route path="/whales">
+      <Route exact path="/whales">
         <WhalesListPage />
+      </Route>
+      <Route path="/whales/create">
+        {loginContext.isAdmin ? <CreateWhalePage /> : <Login />}
       </Route>
       <Route path="/users/update">
         {loginContext.isAdmin ? <UpdateUserRole /> : <Login />}
