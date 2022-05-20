@@ -18,6 +18,7 @@ namespace WhaleSpotting.Models.Database
   
         [ForeignKey("SponsorUserId")]
         public User Sponsor { get; set; }
+        public int SpeciesId {get; set;}
 
     }
 }
